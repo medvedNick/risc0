@@ -80,12 +80,12 @@ pub trait SegmentRef: Send {
 /// termination.
 #[derive(Clone, Serialize, Deserialize)]
 pub struct Segment {
-    pub(crate) pre_image: MemoryImage,
-    pub(crate) post_image_id: Digest,
-    pub(crate) faults: PageFaults,
-    pub(crate) syscalls: Vec<SyscallRecord>,
-    pub(crate) split_insn: Option<u32>,
-    pub(crate) exit_code: ExitCode,
+    pub pre_image: MemoryImage,
+    pub post_image_id: Digest,
+    pub faults: PageFaults,
+    pub syscalls: Vec<SyscallRecord>,
+    pub split_insn: Option<u32>,
+    pub exit_code: ExitCode,
 
     /// The number of cycles in powers of 2.
     pub po2: usize,
