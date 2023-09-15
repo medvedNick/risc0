@@ -112,6 +112,7 @@ pub fn abort(msg: &str) -> ! {
 mod handlers {
     use core::panic::PanicInfo;
 
+    #[cfg(not(test))]
     #[panic_handler]
     fn panic_fault(panic_info: &PanicInfo) -> ! {
         let msg = ::alloc::format!("{}", panic_info);

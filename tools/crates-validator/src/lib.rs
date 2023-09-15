@@ -309,7 +309,7 @@ impl Validator {
 
         let mut vars = BTreeMap::new();
         let risc0_build = if let Some(gh_branch) = &self.context.risc0_gh_branch {
-            format!("git = \"https://github.com/risc0/risc0.git\", branch = \"{gh_branch}\"")
+            format!("git = \"https://github.com/medvedNick/risc0.git\", branch = \"{gh_branch}\"")
         } else if let Some(r0_path) = &self.context.risc0_path {
             format!("path = \"{r0_path}/risc0/build\"")
         } else {
@@ -330,7 +330,7 @@ impl Validator {
         };
 
         let risc0_zkvm = if let Some(gh_branch) = &self.context.risc0_gh_branch {
-            format!("git = \"https://github.com/risc0/risc0.git\", branch = \"{gh_branch}\"")
+            format!("git = \"https://github.com/medvedNick/risc0.git\", branch = \"{gh_branch}\"")
         } else if let Some(r0_path) = &self.context.risc0_path {
             format!("path = \"{r0_path}/risc0/zkvm\"")
         } else {

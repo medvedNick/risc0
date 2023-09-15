@@ -112,7 +112,7 @@ impl NewCommand {
         let mut template_variables = Vec::new();
         if let Some(branch) = self.use_git_branch.as_ref() {
             let spec =
-                format!("git = \"https://github.com/risc0/risc0.git\", branch = \"{branch}\"");
+                format!("git = \"https://github.com/medvedNick/risc0.git\", branch = \"{branch}\"");
             template_variables.push(format!("risc0_build={spec}"));
             template_variables.push(format!("risc0_zkvm={spec}"));
         } else if let Some(path) = self.path.as_ref() {
@@ -262,7 +262,7 @@ mod tests {
         assert!(proj_path.exists());
         assert!(!proj_path.join(".git").exists());
         assert!(find_in_file(
-            "risc0-zkvm = { git = \"https://github.com/risc0/risc0.git\", branch = \"main\"",
+            "risc0-zkvm = { git = \"https://github.com/medvedNick/risc0.git\", branch = \"main\"",
             &proj_path.join("host/Cargo.toml")
         ));
     }
